@@ -463,18 +463,26 @@
         <section class="subscribe text-center" id="message">
           <div class="container">
             <h1><i class="fa fa-paper-plane"></i><span>Leave Us a Message with any Questions, Referrals or to Engage our Services</span></h1>
-            <form action="#">
-              <input type="text" name="" value="" placeholder="First Name*" required>
-              <input type="text" name="" value="" placeholder="Last Name*" required>
-              <input type="text" name="" value="" placeholder="Email Address*" required>
-              <input type="text" name="" value="" placeholder="Company Name*" required>
-              <input type="text" name="" value="" placeholder="Phone Number*" required>
+            <form id="contactform" action="//formspree.io/882646A@gmail.com" method="POST">
+              <input type="hidden" name="_cc" value="882646B@gmail.com,882646C@gmail.com">
+              <input type="text" name="First Name" value="" placeholder="First Name*" required>
+              <input type="text" name="Last Name" value="" placeholder="Last Name*" required>
+              <input type="text" name="_replyto" value="" placeholder="Email Address*" required>
+              <input type="text" name="Company Name" value="" placeholder="Company Name*" required>
+              <input type="text" name="Phone Number" value="" placeholder="Phone Number*" required>
               <input type="text" name="" value="" placeholder="ZIP Code" required>
               <input type="text" name="" value="" placeholder="Description of Company*" required>
               <input type="text" name="" value="" placeholder="Additional Comments" required>
-              <input type="submit" name="" value="Send">
+              <input type="hidden" name="_subject" value="Website contact" />
+              <input type="text" name="_gotcha" style="display:none" />
+              <input type="submit" name="" onclick="alert('Thanks for reaching out to us at Jade ABL. We will review your information and get back to you shortly.')" value="Send">
+              <input type="hidden" name="_next" value="//index.html#contact" />
             </form>
-          </div>
+            <script>
+              var contactform =  document.getElementById('contactform');
+                contactform.setAttribute('action', '//formspree.io/' + '882646A' + '@' + 'gmail' + '.' + 'com');
+            </script>
+	          </div>
         </section>
         <section class="dark-bg text-center section-padding contact-wrap" id="contact">
           <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
