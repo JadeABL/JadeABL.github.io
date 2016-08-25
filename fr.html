@@ -454,18 +454,26 @@ Monsieur Bacarro habite dans la région de Toronto.</p>
         <section class="subscribe text-center" id="message">
           <div class="container">
             <h1><i class="fa fa-paper-plane"></i><span>N’hésitez pas à nous laisser un message pour toute question, pour obtenir des références ou pour retenir nos services.</span></h1>
-            <form action="#">
-              <input type="text" name="" value="" placeholder="Prénom*" required>
-              <input type="text" name="" value="" placeholder="Nom*" required>
-              <input type="text" name="" value="" placeholder="Adresse de courriel*" required>
-              <input type="text" name="" value="" placeholder="Nom de l’entreprise*" required>
-              <input type="text" name="" value="" placeholder="Téléphone*" required>
-              <input type="text" name="" value="" placeholder="Code postal*" required>
-              <input type="text" name="" value="" placeholder="Description de l’entreprise*" required>
-              <input type="text" name="" value="" placeholder="Autres commentaires" required>
-              <input type="submit" name="" value="Soumettre">
+            <form id="contactform" action="//formspree.io/abacarro@jadeabl.com" method="POST">
+              <input type="hidden" name="_cc" value="elias.bacarro@gmail.com,ccammalleri@jadeabl.com,lconte@jadeabl.com">
+              <input type="text" name="First Name" value="" placeholder="Prénom*" required>
+              <input type="text" name="Last Name" value="" placeholder="Nom*" required>
+              <input type="text" name="Email Address" value="" placeholder="Adresse de courriel*" required>
+              <input type="text" name="Company Name" value="" placeholder="Nom de l’entreprise*" required>
+              <input type="text" name="Phone Number" value="" placeholder="Téléphone*" required>
+              <input type="text" name="Zip Code" value="" placeholder="Code postal*" required>
+              <input type="text" name="Description of Company" value="" placeholder="Description de l’entreprise*" required>
+              <input type="text" name="Additional Comments" value="" placeholder="Autres commentaires">
+              <input type="hidden" name="_subject" value="Website contact" />
+              <input type="text" name="_gotcha" style="display:none" />
+              <input type="submit" name="" onclick="alert('Merci de nous contacter au Jade ABL. Nous examinerons votre information et vous revenir peu de temps.')" value="Soumettre">
+              <input type="hidden" name="_next" value="http://jadeabl.github.io/#message" />
             </form>
-          </div>
+            <script>
+              var contactform =  document.getElementById('contactform');
+                contactform.setAttribute('action', '//formspree.io/' + 'abacarro' + '@' + 'jadeabl' + '.' + 'com');
+            </script>
+	          </div>
         </section>
         <section class="dark-bg text-center section-padding contact-wrap" id="contact">
           <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
@@ -527,14 +535,22 @@ Monsieur Bacarro habite dans la région de Toronto.</p>
         <footer>
           <div class="container">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <ul class="legals">
-                  <li><a href="#">Modalités et conditions</a></li>
-                  <li><a href="#">Notes légales</a></li>
+                  <li>&copy; 2016 Les Services ABL Jade Inc. </li>
+                  <li><a href="disclaimers/fr-disclaimer.pdf" target="_blank">Avis Juridique</a></li>
                 </ul>
               </div>
-              <div class="col-md-6 credit">
-                <p>Conception Web: <a href="https://http://eliasbacarro.github.io/">Elias Bacarro</a></p>
+
+              <div class="col-md-2">
+                <ul class="legals">
+                  <li>Français</li>
+                  <li><a href="index.html#contact">English</a></li>
+                </ul>
+              </div>
+
+              <div class="col-md-5 credit">
+                <p>Conception Web: <a href="http://eliasbacarro.github.io/">Elias Bacarro</a></p>
               </div>
             </div>
           </div>
